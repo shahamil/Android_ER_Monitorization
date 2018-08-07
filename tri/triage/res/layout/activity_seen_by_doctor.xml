@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SeenByDoctorActivity" >
+
+    <TextView
+        android:id="@+id/seenby_datetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:text="@string/seenby_date" />
+
+    <EditText
+        android:id="@+id/seenby_dateedit"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/seenby_datetext"
+        android:layout_alignBottom="@+id/seenby_datetext"
+        android:layout_toRightOf="@+id/seenby_timetext"
+        android:ems="10"
+        android:inputType="date" 
+        android:hint="@string/date_edit"/>
+
+    <TextView
+        android:id="@+id/seenby_timetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seenby_datetext"
+        android:layout_below="@+id/seenby_dateedit"
+        android:layout_marginTop="52dp"
+        android:text="@string/seenby_time" />
+
+    <EditText
+        android:id="@+id/seenby_timeedit"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/seenby_timetext"
+        android:layout_alignBottom="@+id/seenby_timetext"
+        android:layout_alignLeft="@+id/seenby_dateedit"
+        android:ems="10"
+        android:inputType="time"
+        android:hint="@string/time_edit" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/setSeenDT_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seenby_timeedit"
+        android:layout_below="@+id/seenby_timeedit"
+        android:layout_marginTop="25dp"
+        android:text="@string/setSeenDT_button" 
+        android:onClick="setSeenByTime"/>
+
+    <TextView
+        android:id="@+id/invaildtextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/setSeenDT_button"
+        android:layout_alignLeft="@+id/seenby_timetext"
+        android:layout_marginBottom="14dp"
+        android:text="@string/invaildtext12"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

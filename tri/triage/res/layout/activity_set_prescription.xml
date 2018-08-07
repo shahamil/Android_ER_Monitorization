@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SetPrescriptionActivity" >
+
+    <TextView
+        android:id="@+id/currentTime_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/currentTime_textView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/currentTimeP_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/currentTime_textView"
+        android:layout_alignBottom="@+id/currentTime_textView"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/currentTime_textView"
+        android:ems="10"
+        android:inputType="time"
+        android:hint="@string/currentTimeP_editText">
+       
+ 
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/pName_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentTimeP_editText"
+        android:layout_marginTop="22dp"
+        android:layout_toLeftOf="@+id/prescriptionName_editText"
+        android:text="@string/pName_textView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/prescriptionName_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pName_textView"
+        android:layout_alignLeft="@+id/currentTimeP_editText"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/instruction_Textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pName_textView"
+        android:layout_below="@+id/pName_textView"
+        android:layout_marginTop="46dp"
+        android:text="@string/instruction_Textview"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/prescriptionInstructions_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/instruction_Textview"
+        android:layout_alignBottom="@+id/instruction_Textview"
+        android:layout_toRightOf="@+id/currentTime_textView"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/setPres_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/prescriptionName_editText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/setPres_button"
+        android:onClick="setPrescription" />
+
+    <TextView
+        android:id="@+id/invaildTextViewp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/currentTime_textView"
+        android:layout_below="@+id/prescriptionInstructions_EditText"
+        android:layout_marginTop="44dp"
+        android:text="@string/invaildTextViewp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

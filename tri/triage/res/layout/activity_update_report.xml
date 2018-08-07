@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".UpdateReportActivity" >
+
+    <EditText
+        android:id="@+id/currentTime_editText"
+        android:layout_width="160sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/currentTime_text"
+        android:layout_alignBottom="@+id/currentTime_text"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="@string/currentTime_edit"
+        android:inputType="time" />
+
+        <Button
+            android:id="@+id/updateReportandSave_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="updateReportAndSave"
+            android:text="@string/updateReportandSave_Button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/symptoms_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/updateReportandSave_button"
+            android:layout_marginBottom="18dp"
+            android:layout_toLeftOf="@+id/symptoms_editText"
+            android:text="@string/symptoms_text1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/vitals_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/currentTime_text"
+            android:layout_alignTop="@+id/temperature_editText"
+            android:text="@string/vitals_text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/invaildTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/invaildTextView1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/currentTime_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/invaildTextView1"
+            android:layout_below="@+id/invaildTextView1"
+            android:layout_marginTop="19dp"
+            android:text="@string/currentTime_text"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/temperature_editText"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/diastolic_editText"
+            android:layout_alignLeft="@+id/currentTime_editText"
+            android:ems="10"
+            android:hint="@string/temperature_edit"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/diastolic_editText"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/systolic_editText"
+            android:layout_alignLeft="@+id/temperature_editText"
+            android:ems="10"
+            android:hint="@string/diastolic_edit"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/systolic_editText"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/diastolic_editText"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="@string/systolic_edit"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/heartRate_editText"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/systolic_editText"
+            android:layout_below="@+id/systolic_editText"
+            android:ems="10"
+            android:hint="@string/heartRate_edit"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/symptoms_editText"
+            android:layout_width="160sp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/symptoms_text1"
+            android:layout_alignRight="@+id/updateReportandSave_button"
+            android:ems="10"
+            android:hint="@string/symptoms_edit"
+            android:inputType="textImeMultiLine" >
+
+            <requestFocus />
+        </EditText>
+
+</RelativeLayout>

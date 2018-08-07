@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SetTreatedActivity" >
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/outTime" />
+
+    <EditText
+        android:id="@+id/timeEditView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeTextView"
+        android:layout_toRightOf="@+id/timeTextView"
+        android:ems="10"
+        android:inputType="time" 
+        android:hint="@string/timeEditView"/>
+
+    <Button
+        android:id="@+id/setTreated_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeEditView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/setTreated_button" 
+        android:onClick="setTreated"/>
+
+    <TextView
+        android:id="@+id/inviald"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setTreated_button"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@+id/timeTextView"
+        android:text="@string/inviald"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

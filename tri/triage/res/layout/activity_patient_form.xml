@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".PatientFormActivity" >
+
+    <EditText
+        android:id="@+id/name_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/name_editText" />
+
+    <EditText
+        android:id="@+id/diastolic_editText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/temperature_editText"
+        android:layout_alignBottom="@+id/temperature_editText"
+        android:layout_toRightOf="@+id/temperature_editText"
+        android:ems="10"
+        android:hint="@string/diastolic_editText"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/systolic_editText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/diastolic_editText"
+        android:layout_alignBottom="@+id/diastolic_editText"
+        android:layout_toRightOf="@+id/diastolic_editText"
+        android:ems="10"
+        android:hint="@string/systolic_editText"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/healthcardnum_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_editText"
+        android:layout_below="@+id/name_editText"
+        android:ems="10"
+        android:hint="@string/healthcardnum_editText" />
+
+    <EditText
+        android:id="@+id/dateofbirth_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/healthcardnum_editText"
+        android:layout_below="@+id/healthcardnum_editText"
+        android:ems="10"
+        android:hint="@string/dateofbirth_editText"
+        android:inputType="date"/>
+       
+
+    <EditText
+        android:id="@+id/age_editText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateofbirth_editText"
+        android:layout_below="@+id/dateofbirth_editText"
+        android:ems="10"
+        android:hint="@string/age_editText"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/currentTime_editText"
+        android:layout_width="175sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/age_editText"
+        android:layout_alignBottom="@+id/age_editText"
+        android:layout_alignRight="@+id/review_button"
+        android:ems="05"
+        android:hint="@string/currentTime_editText"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/vitals_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/age_editText"
+        android:layout_below="@+id/age_editText"
+        android:text="@string/vitals_textView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/temperature_editText"
+        android:layout_width="75sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/vitals_textView"
+        android:layout_below="@+id/vitals_textView"
+        android:ems="10"
+        android:hint="@string/temperature_editText"
+        android:inputType="number|numberDecimal" />
+
+    <EditText
+        android:id="@+id/heartrate_editText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/temperature_editText"
+        android:layout_below="@+id/diastolic_editText"
+        android:ems="10"
+        android:hint="@string/heartrate_editText"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/symptoms_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/heartrate_editText"
+        android:layout_below="@+id/heartrate_editText"
+        android:text="@string/symptoms_textView"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/symptoms_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
+        android:layout_alignLeft="@+id/symptoms_textView"
+        android:layout_below="@+id/symptoms_textView"
+        android:ems="10"
+        android:hint="@string/symptoms_editText"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/review_button"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:layout_alignLeft="@+id/systolic_editText"
+        android:layout_below="@+id/symptoms_editText"
+        android:onClick="addPatient"
+        android:text="@string/review_button" />
+
+    <TextView
+        android:id="@+id/error_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/review_button"
+        android:layout_alignBottom="@+id/review_button"
+        android:layout_alignLeft="@+id/symptoms_editText"
+        android:text="@string/error_textView" />
+
+</RelativeLayout>
